@@ -1,0 +1,122 @@
+table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 2em;
+    font-family: normal;
+    font-weight: bold;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+.logo-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    display: inline-block;
+    max-width: 85px;
+    max-height: 750px;
+    padding: 0 0;
+    margin: 0;
+}
+.nombre-logo{
+    float: rigth;
+    font-weight: bold;
+    font-size: 21px;
+    letter-spacing: 0.7px;
+    padding: 1 rem 0;
+}
+
+th{
+    text-align: center;
+    background-color: #ffd6d6;
+    color: #060606;
+    text-align: left;
+    font-weight: bolder;
+}
+nav{
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+}
+body{
+    text-align: center;
+    font: 300 20px/1.7 'Open Sans';
+    background:#ffffff;
+    margin: 0;
+}
+
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navbar ul li{
+    display: inline-block;
+}
+.navbar ul li a{
+    display: block;
+    padding:1rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+.navbar ul li a:hover{
+    background: #a73535;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    background:#d94840;
+    font-style: normal;
+    color:#ffffff;
+    letter-spacing: 0.02em;
+    padding: 0.2rem 0;
+    position:fixed;
+    left: 0;
+    top: 0;
+    right: 0; /*width: 100%*/
+    z-index: 999; /*traer al frente*/
+}
+.header a{
+    color:#ffffff;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+}
+td{
+    text-align: center;
+}
+.boton_personalizado{
+    position: absolute;
+    top: 220px;
+    left: 300px;
+  }
+  .seccion{
+position:relative;
+top:  160px;
+left: -290px;
+font-size: small;
+  }
+
+  .secciona
+  {
+    
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%)
+  }

@@ -1,0 +1,74 @@
+
+<body>
+    <header class="header">
+           <div class="container logo-nav">
+             <figure class="logo">
+               <figcaption class="nombre-logo notranslate">Running Artist</figcaption>
+           </figure>
+               <!--Navegar-->
+               <nav class="navbar">
+                 <ul>
+                  <li><a routerLink="/home">Home</a></li>
+                  <li><a routerLink="/business/artists">Artists</a></li>
+                 </ul>
+               </nav>
+         </div>
+       </header>
+
+
+       <section class="container">
+<div class="container" >
+
+    <h1>Artists</h1>
+    <label style="font-size: 13px;">No cambiar ID si esta en modo edicion</label>
+  <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      
+      <input matInput placeholder="Id" [(ngModel)]="artists.id"> 
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput required placeholder="name" [(ngModel)]="artists.name">
+  
+    </mat-form-field>
+  
+    <br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Photo</mat-label>
+        <input matInput required placeholder="photo" [(ngModel)]="artists.photo">
+      </mat-form-field>
+    
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Favorite Sports</mat-label>
+        <input matInput required placeholder="favoritesports" [(ngModel)]="artists.favoritesports">
+      </mat-form-field>
+    
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Points</mat-label>
+        <input matInput required placeholder="points" [(ngModel)]="artists.points">
+      </mat-form-field>
+    
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Group Id</mat-label>
+        <input matInput required placeholder="groupId" [(ngModel)]="artists.groupId">
+      </mat-form-field>
+    
+      <br>
+
+    
+    <button mat-raised-button color="primary" (click)="aceptar()">Save</button>
+    <button mat-raised-button color="warn" routerLink="/business/artists">Cancel</button>
+    <p style="color:crimson" style="font-weight:bold">{{mensaje}}</p>
+  
+  </div>
+</section>
+  </body>
+
+  

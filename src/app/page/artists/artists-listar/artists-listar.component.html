@@ -1,0 +1,85 @@
+<body>
+    <header class="header">
+           <div class="container logo-nav">
+             <figure class="logo">
+               <figcaption class="nombre-logo notranslate">Running Artist</figcaption>
+           </figure>
+               <!--Navegar-->
+               <nav class="navbar">
+                 <ul>
+                  <li><a routerLink="/home">Home</a></li>
+                  <li><a routerLink="/business/artists">Artists</a></li>
+                 </ul>
+
+                 <p style="color:crimson" style="font-size:small"  style="position:absolute"  style="font-weight:bold">{{this.mensaje()}}</p>
+
+               </nav>
+
+               <!-- <div class="example-button-container">
+    <button mat-mini-fab color="primary" class="boton_personalizado"
+      aria-label="Example icon button with a plus one icon" routerLink="/admin/new">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div> -->
+         
+         </div>
+       </header>
+  
+       <div class="seccion">
+        <app-artists-buscar></app-artists-buscar>
+      </div>
+      <div>
+   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+  
+<!-- -->
+       <ng-container matColumnDef="id">
+         <th mat-header-cell *matHeaderCellDef> Id </th>
+         <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+       </ng-container>
+       <!-- -->
+       <ng-container matColumnDef="name">
+         <th mat-header-cell *matHeaderCellDef>  Name </th>
+         <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+       </ng-container>
+       <!-- -->
+       <ng-container matColumnDef="photo">
+         <th mat-header-cell *matHeaderCellDef> Photo </th>
+         <td mat-cell *matCellDef="let element"> {{element.photo}} </td>
+       </ng-container>
+<!-- -->
+       <ng-container matColumnDef="favoritesports">
+        <th mat-header-cell *matHeaderCellDef> Favorite Sports</th>
+        <td mat-cell *matCellDef="let element"> {{element.favoritesports}} </td>
+      </ng-container>
+      <!-- -->
+      <ng-container matColumnDef="points">
+        <th mat-header-cell *matHeaderCellDef> Points </th>
+        <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="groupId">
+        <th mat-header-cell *matHeaderCellDef> GroupId</th>
+        <td mat-cell *matCellDef="let element"> {{element.groupId}} </td>
+      </ng-container>
+
+       <ng-container matColumnDef="ACCIÓN 1">
+        <th mat-header-cell *matHeaderCellDef>ACTIONS</th>
+        <td mat-cell *matCellDef="let element"> 
+          <img src="../../../../assets/edit.png"   [routerLink]="['edit', element?.id]">
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="ACCIÓN 2">
+        <th mat-header-cell *matHeaderCellDef> ACTIONS </th>
+        <td mat-cell *matCellDef="let element">
+            <img src="../../../../assets/delete.png" (click)="confirmar(element.id)">
+        </td>
+      </ng-container>
+       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+     </table>
+    </div>
+ 
+    <button class="botones" routerLink="/admin/new">New</button>
+    
+    
+  </body>
